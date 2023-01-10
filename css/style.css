@@ -1,0 +1,93 @@
+:root {
+    --screen: #616161;
+    --calc: #000000;
+    --calcBTN: #353535;
+    --hoverBTN: #616161;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 20px;
+}
+
+.calculatorBox {
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    background-color: var(--calc);
+    width: 350px;
+}
+
+.screenBox {
+    display: flex;
+}
+
+.calcScreen {
+    display: flex;
+    border-radius: 15px 15px 0 0;
+    background-color: var(--screen);
+    padding: 12px 30px;
+    width: 100%;
+    height: 75px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.numberBox {
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.numberBox .calcBTN {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--calcBTN);
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 10%;
+    transition: .2s ease-in-out;
+    scale: 1;
+}
+
+.numberBox .calcBTN:hover {
+    background-color: var(--hoverBTN);
+    scale: 1.03;
+}
+
+
+.numberBox .calcBTN span {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.numberBox .calcBTN:nth-child(19) {
+    flex-basis: 45%;
+}
+
+.operator {
+    color: aquamarine;
+    font-weight: bolder;
+}
